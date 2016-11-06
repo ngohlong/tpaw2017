@@ -1,0 +1,24 @@
+body {
+    background-color: lightblue;
+}
+
+table{
+    background-color: white;
+}
+
+h1{
+	color:black;
+	margin-left: 20px'
+	font-size:0.5cm;
+	transition:3s;
+}
+h1:hover{
+	font-size:1cm;
+}
+a {
+    color:black;
+	text-decoration :underline;
+}
+a:hover{
+color: red;
+}
