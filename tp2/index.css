@@ -1,0 +1,27 @@
+body {
+    background-color:white;
+}
+table{
+	background-color:white
+}
+td{
+	padding:5px;
+}
+table{
+	border:1px;
+}
+
+#error{
+	border:2px;
+	border-color:black;
+	background-color:red;
+	color:white;
+	display:none;
+}
+#resultat{
+	border:2px;
+	border-color:black;
+	background-color:blue;
+	color:white;
+	display:none;
+}

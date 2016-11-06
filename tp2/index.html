@@ -1,23 +1,51 @@
-<!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
-    </head>
-    <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+<head>
+	<meta charset="utf-8" />
+	<link href="index.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<h1>Saise d'une fiche "Personne"</h1>
+<table style="width:25%">
+	<form action="page1.html" method="post">
+		<tr>
+			<p>
+				<td><label for="nom" size="">Nom</label></td>
+				<td><input type="text" id="nom" name="nom" placeholder="" value="" required/></td>
+			</p>
+		</tr>
+		<tr>
+			<p>
+				<td><label for="prenom">Prenom</label></td>
+				<td><input type="text" id="prenom" name="prenom" placeholder="" value="" required/></td>
+			</p>
+		</tr>
+		<tr>
+			<p>
+				<td><label for="date">Date de naisaance</label></td>
+				<td><input type="date" id="date" name="date" placeholder="DD/MM/YYYY" value="" required/></td>
+			</p>
+		</tr>
+		<tr>
+			<p>
+				<td><label for="addr">Address</label></td>
+				<td><input type="text" id="addr" name="addr" placeholder="" value="" required/></td>
+			</p>
+		</tr>
+		<tr>
+			<p>
+				<td><label for="mail">Mail</label></td>
+				<td><input type="email" id="email" name="mail" placeholder="" value="" required/></td>
+			</p>
+		</tr>
+		<td></td>
+		<td><button type="button" onclick="validation();">Valider</button></td>
+	</form>
+</table>
+
+<div id="error"> </div>
+<div id="resultat"> </div>
+
+</body>
+
 </html>
