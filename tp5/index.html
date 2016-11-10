@@ -7,20 +7,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 	<script type="text/javascript" src="index.js"></script>
+	<style>
+		div.result {
+			display: none;
+		}
+	</style>
 </head>
 
 <body>
-	<h1> Weather Forecast </h1>
+	<h1 style="text-align:center"> Weather Forecast </h1>
 	<div class="row">
-		<div class="col-sm-offset-2 col-lg-7">
-			<div class="input-group" id="searchCity">
+		<div class="col-sm-offset-3 col-lg-6">
+			<div class="input-group" align="center" id="searchCity">
 				<span class="input-group-btn">
 						<button class="btn btn-warning" type="button" id="gps">GPS</button>
 					</span>
@@ -29,16 +30,12 @@
 						<button class="btn btn-info" type="submit" id="search">Recherche</button>
 					</span>
 			</div>
-			<!-- /input-group -->
 		</div>
-		<!-- /.col-lg-6 -->
 	</div>
-	<!-- /.row -->
 
-	<div class="row">
+	<div class="result" style="text-align:center" id="result">
 		<div class="col-sm-offset-3 col-lg-6">
-			<div id="result"></div>
-			<h1 style="text-align:center" id="cityName"></h1>
+			<h1 style="text-align:center" id="cityname"></h1>
 			<div style="text-align:center" id="time"></div>
 			<hr>
 			<div style="text-align:center" id="icon"></div>
@@ -46,14 +43,13 @@
 			<div style="text-align:center" id="description"></div>
 			<hr>
 			<div class="form-group">
-				<label for="humidity" class="col-sm-1 control-label">Humidity</label>
+				<label for="humidity" class="col-sm-1 control-label" style.display="none">Humidity</label>
 				<div style="text-align:center" id="humidity"></div>
 			</div>
 			<hr>
 			<div class="form-group">
 				<label for="cloud" class="col-sm-1 control-label">Nuage</label>
 				<div style="text-align:center" id="cloud"></div>
-
 			</div>
 			<hr>
 			<div class="form-group">
@@ -61,10 +57,6 @@
 				<div style="text-align:center" id="wind"></div>
 			</div>
 			<hr>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-offset-3 col-lg-6">
 			<div style="text-align:center" id="mapholder"></div>
 		</div>
 	</div>
