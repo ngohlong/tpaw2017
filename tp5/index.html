@@ -1,23 +1,72 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP5</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lqng="en">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
-    </head>
-    <body>        
-        <h1>TP5</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
-</html>
+<head>
+	<title> tp5 </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+	<h1> Weather Forecast </h1>
+	<div class="row">
+		<div class="col-sm-offset-2 col-lg-7">
+			<div class="input-group" id="searchCity">
+				<span class="input-group-btn">
+						<button class="btn btn-warning" type="button" id="gps">GPS</button>
+					</span>
+				<input type="search" id="city" class="form-control" placeholder="Votre ville, Paris, NY...">
+				<span class="input-group-btn">
+						<button class="btn btn-info" type="submit" id="search">Recherche</button>
+					</span>
+			</div>
+			<!-- /input-group -->
+		</div>
+		<!-- /.col-lg-6 -->
+	</div>
+	<!-- /.row -->
+
+	<div class="row">
+		<div class="col-sm-offset-3 col-lg-6">
+			<div id="result"></div>
+			<h1 style="text-align:center" id="cityName"></h1>
+			<div style="text-align:center" id="time"></div>
+			<hr>
+			<div style="text-align:center" id="icon"></div>
+			<h3 style="text-align:center" id="temp"></h3>
+			<div style="text-align:center" id="description"></div>
+			<hr>
+			<div class="form-group">
+				<label for="humidity" class="col-sm-1 control-label">Humidity</label>
+				<div style="text-align:center" id="humidity"></div>
+			</div>
+			<hr>
+			<div class="form-group">
+				<label for="cloud" class="col-sm-1 control-label">Nuage</label>
+				<div style="text-align:center" id="cloud"></div>
+
+			</div>
+			<hr>
+			<div class="form-group">
+				<label for="wind" class="col-sm-1 control-label">Vent</label>
+				<div style="text-align:center" id="wind"></div>
+			</div>
+			<hr>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-offset-3 col-lg-6">
+			<div style="text-align:center" id="mapholder"></div>
+		</div>
+	</div>
+
+</body>
