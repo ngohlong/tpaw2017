@@ -26,11 +26,11 @@
 				</div>
 				<hr>
 				<div class="form-group" style="text-align: center">
-					<label for="humidity" class="col-sm-1 control-label">Nuage</label> {{meteo.clouds.all}}%
+					<label for="nuage" class="col-sm-1 control-label">Nuage</label> {{meteo.clouds.all}}%
 				</div>
 				<hr>
 				<div class="form-group" style="text-align: center">
-					<label for="humidity" class="col-sm-1 control-label">Vent</label> {{meteo.wind.speed}} m/s/</span><i id="windDirection" class="wi wi-wind towards-{{meteo.wind.deg}}-deg"></i>
+					<label for="vent" class="col-sm-1 control-label">Vent</label> {{meteo.wind.speed}} m/s/</span><i id="windDirection" class="wi wi-wind towards-{{meteo.wind.deg}}-deg"></i>
 				</div>
 				<hr>
 				<image id="map" src="http://maps.googleapis.com/maps/api/staticmap?size=500x400&zoom=10&center={{meteo.name}}&markers={{meteo.name}}">
