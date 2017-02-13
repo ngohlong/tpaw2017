@@ -1,0 +1,54 @@
+<form data-ng-submit="recherche()" name="myForm">
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-btn">
+			    <button class="btn btn-warning" type="button" data-ng-click="gps()"> GPS </button>
+			</span>
+            <input type="search" name="city" ng-model="city" required ng-minlength="3" ng-maxlength="20" class="form-control" />
+
+            <span class="input-group-btn">
+                <!-- TP7 : l’attribut nb-disabled rendra cliquable le bouton “rechercher” seulement si le champ de saisie est correctement rempli -->
+                <button class="btn btn-primary" type="submit"  ng-disabled="!myForm.$valid"> 
+                    Recherche
+                </button>
+		    </span>
+        </div>
+    </div>
+
+    <!-- TP7 : ici, on gère l’affichage des messages d’erreur  selon l’état du champ de saisie -->
+    <div ng-messages="myForm.city.$error" role="alert">
+        <div ng-message="required" class="label label-danger">Veuillez saisir une ville SVP</div>
+        <div ng-message="minlength" class="label label-danger">Min length is 3</div>
+        <div ng-message="maxlength" class="label label-danger">Max length is 20</div>
+    </div>
+</form>
+
+<div ng-if="meteo" class="text-center">
+    <h2>{{meteo.name}}</h2>
+    <div> {{meteo.dt*1000 | date:'@HH:mm'}} </div>
+    <img ng-src="https://openweathermap.org/img/w/{{meteo.weather[0].icon}}.png" alt="" />
+    <td style="width:500%">{{meteo.main.temp | number:0}}°</td>
+    <div>{{meteo.weather[0].description}}</div>
+    <hr>
+    <div class="form-group">
+        <label for="humidity" class="col-sm-1 control-label">Humidity</label> {{meteo.main.humidity}}%
+    </div>
+    <hr>
+    <div class="form-group">
+        <label for="nuage" class="col-sm-1 control-label">Nuage</label> {{meteo.clouds.all}}%
+    </div>
+    <hr>
+    <div class="form-group">
+        <label for="vent" class="col-sm-1 control-label">Vent</label> {{meteo.wind.speed}} m/s/</span><i id="windDirection" class="wi wi-wind towards-{{meteo.wind.deg}}-deg"></i>
+    </div>
+    <div ng-repeat="item in forecast.list">
+        <hr>
+        <div class="row">
+            <div class="col-sm-1 control-label"> {{item.dt*1000 | date:'EEEE HH:mm'}}</div>
+            <div class="">
+                <img ng-src="https://openweathermap.org/img/w/{{item.weather[0].icon}}.png" alt="" />{{item.main.temp}}°</div>
+        </div>
+    </div>
+    </div>
+
+<p ng-if="errorMsg"> {{errorMsg}} </p>
